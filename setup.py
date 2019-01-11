@@ -11,5 +11,11 @@ setup(
     long_description=open('README.md').read(),
     install_requires = [
       'flask'
-    ]
+    ],
+    extras_require={
+        'dev': [
+            'pylint',
+            'coverage'
+        ]
+    }
 )

@@ -53,8 +53,7 @@ freeze_requirements: ## update the project dependencies based on setup.py declar
 
 .PHONY: install_requirements_dev
 install_requirements_dev: venv ## install pip requirements for development
-	. venv/bin/activate; pip install -r requirements_dev.txt
-	. venv/bin/activate; pip install -e .
+	. venv/bin/activate; pip install -e .[dev]
 
 .PHONY: install_requirements
 install_requirements: ## install pip requirements based on requirements.txt

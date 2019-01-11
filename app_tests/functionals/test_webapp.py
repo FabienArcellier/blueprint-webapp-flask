@@ -13,4 +13,4 @@ class WebappTest(unittest.TestCase):
         rv = self.client.get('/')
 
         # Assert
-        self.assertTrue(b'Hello Fabien!' in rv.data)
+        self.assertTrue(b'Hello Fabien!' in rv.data, rv.data)
