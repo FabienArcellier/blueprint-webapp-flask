@@ -5,7 +5,7 @@ python:
 
 install:
   - make venv
-  - make install_requirement_dev
+  - make install_requirements_dev
 
 script:
   - make lint
