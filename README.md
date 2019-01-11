@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/FabienArcellier/blueprint-webapp-flask.svg?branch=master)](https://travis-ci.org/FabienArcellier/blueprint-webapp-flask)
+
 ## Motivation
 
 blueprint to implement a flask application. This application may be used to:
