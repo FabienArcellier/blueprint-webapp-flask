@@ -6,7 +6,7 @@ blueprint to implement a flask application. This application may be used to:
 * build API application
 * ...
 
-## Getting started
+## Getting started
 
 ```bash
 make venv

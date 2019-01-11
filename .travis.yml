@@ -1,0 +1,12 @@
+language: python
+
+python:
+  - "3.6"
+
+install:
+  - make venv
+  - make install_requirement_dev
+
+script:
+  - make lint
+  - make tests
