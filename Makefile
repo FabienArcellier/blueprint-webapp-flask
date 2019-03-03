@@ -48,15 +48,17 @@ clean :
 freeze_requirements: ## update the project dependencies based on setup.py declaration
 	rm -rf venv
 	$(MAKE) venv
-	. venv/bin/activate; pip install .
-	. venv/bin/activate; pip freeze | grep -v "$(APPLICATION_MODULE)" > requirements.txt
+	. venv/bin/activate; pip install --editable .
+	. venv/bin/activate; pip freeze --exclude-editable > requirements.txt
 
 .PHONY: install_requirements_dev
 install_requirements_dev: venv ## install pip requirements for development
+	. venv/bin/activate; pip install -r requirements.txt
 	. venv/bin/activate; pip install -e .[dev]
 
 .PHONY: install_requirements
 install_requirements: ## install pip requirements based on requirements.txt
+	. venv/bin/activate; pip install -r requirements.txt
 	. venv/bin/activate; pip install -e .
 
 .PHONY: venv
