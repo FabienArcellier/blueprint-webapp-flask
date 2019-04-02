@@ -13,8 +13,7 @@ blueprint to implement a flask application. This application may be used to:
 ```bash
 make venv
 make install_requirements_dev
-source venv/bin/activate
-FLASK_APP=app/webapp.py FLASK_ENV=development flask run
+make server_run
 ```
 
 ## The latest version
@@ -30,7 +29,7 @@ git clone ...
 You can run the application with the following command
 
 ```python
-FLASK_APP=app/webapp.py FLASK_ENV=development flask run
+make server_run
 ```
 
 ## Contributing

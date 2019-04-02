@@ -7,6 +7,10 @@ TEST_MODULE=$(APPLICATION_MODULE)_tests
 help: ## provides cli help for this makefile (default)
 	@grep -E '^[a-zA-Z_0-9-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
+.PHONY: server_run
+server_run:
+	. venv/bin/activate; FLASK_APP=${APPLICATION_MODULE}/webapp.py FLASK_ENV=development flask run
+
 .PHONY: dist
 dist:
 	. venv/bin/activate; python setup.py sdist
