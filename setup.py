@@ -17,5 +17,10 @@ setup(
             'pylint',
             'coverage'
         ]
-    }
+    },
+    classifier= [
+        'Programming Language :: Python :: 3',
+        'Framework :: Flask',
+        'Operating System :: POSIX :: Linux'
+    ],
 )
