@@ -28,7 +28,7 @@ tests_functionals: ## run functionals tests
 
 .PHONY: lint
 lint: ## run pylint
-	. venv/bin/activate; pylint --rcfile=.rcfile $(APPLICATION_MODULE)
+	. venv/bin/activate; pylint --rcfile=.pylintrc $(APPLICATION_MODULE)
 
 .PHONY: coverage
 coverage: coverage_run coverage_report # run the code coverage
