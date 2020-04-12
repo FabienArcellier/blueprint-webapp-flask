@@ -12,6 +12,9 @@ blueprint to implement a flask application. This application may be used to:
 
 ### System requirements
 
+The following requirements has to be setup on your host before running the command
+from this repository.
+
 * `python 3.6` at least
 * [pipenv](https://pipenv.pypa.io/en/latest/)
 
@@ -35,7 +38,7 @@ git clone git@github.com:FabienArcellier/blueprint-webapp-flask.git
 You can run the application with the following command
 
 ```python
-make server_run
+make start
 ```
 
 ## Contributing
@@ -46,7 +49,6 @@ Use make to instanciate a python virtual environment in ./venv3 and install the
 python dependencies.
 
 ```bash
-make venv
 make install_requirements_dev
 ```
 
@@ -65,7 +67,7 @@ When you setup the requirements, a `venv3` directory on python 3 is created.
 To activate the venv, you have to execute /
 
 ```bash
-source venv/bin/activate
+make activate
 ```
 
 ### Run the linter and the unit tests
