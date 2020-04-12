@@ -1,0 +1,25 @@
+name: continuous_integration
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: update package manager & install make python3 pip pipenv
+      run: |
+        sudo apt update -y
+        sudo apt install -y make python3 python3-setuptools python3-pip
+        sudo pip3 install pipenv
+        make install_requirements_dev
+
+    - name: lint
+      run:
+        make lint
+
+    - name: tests
+      run:
+        make tests

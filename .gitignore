@@ -1,6 +1,7 @@
 /.cache
 /*.egg-info
-.idea
+/.idea
+/.vscode
 dist
 venv
 venv3
