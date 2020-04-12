@@ -10,10 +10,16 @@ blueprint to implement a flask application. This application may be used to:
 
 ## Getting started
 
+### System requirements
+
+* `python 3.6` at least
+* [pipenv](https://pipenv.pypa.io/en/latest/)
+
+### Install the python dependencies
+
 ```bash
-make venv
 make install_requirements_dev
-make server_run
+make start
 ```
 
 ## The latest version
@@ -21,7 +27,7 @@ make server_run
 You can find the latest version to ...
 
 ```bash
-git clone ...
+git clone git@github.com:FabienArcellier/blueprint-webapp-flask.git
 ```
 
 ## Usage

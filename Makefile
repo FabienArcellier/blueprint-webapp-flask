@@ -50,6 +50,10 @@ install_requirements: ## install pip requirements based on requirements.txt
 lint: ## run pylint
 	pipenv run pylint --rcfile=.pylintrc $(APPLICATION_MODULE)
 
+.PHONY: start
+start: ## run the webserver for development
+	pipenv run start
+
 .PHONY: tests
 tests: tests_units tests_acceptances ## run automatic tests
 
