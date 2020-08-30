@@ -3,23 +3,27 @@ name: continuous_integration
 on: [push, pull_request]
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+    build:
+        runs-on: ubuntu-latest
+        strategy:
+            matrix:
+                python-version: [3.6, 3.7, 3.8]
 
-    steps:
-    - uses: actions/checkout@v2
+        steps:
+            -   uses: actions/checkout@v2
 
-    - name: update package manager & install make python3 pip pipenv
-      run: |
-        sudo apt update -y
-        sudo apt install -y make python3 python3-setuptools python3-pip
-        sudo pip3 install pipenv
-        make install_requirements_dev
+            -   name: Set up Python ${{ matrix.python-version }}
+                uses: actions/setup-python@v2
 
-    - name: lint
-      run:
-        make lint
+            -   name: install pipenv package manager
+                run: |
+                    sudo pip install pipenv
+                    make install_requirements_dev
 
-    - name: tests
-      run:
-        make tests
+            -   name: lint
+                run:
+                    make lint
+
+            -   name: tests
+                run:
+                    make tests
