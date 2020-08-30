@@ -41,6 +41,15 @@ You can run the application with the following command
 make start
 ```
 
+### Usage for production
+
+This blueprint use ``gunicorn`` as wsgi server for production configuration.
+The command is set in the Procfile to be available on PaaS environment as ``Heroku`` or ``Scalingo``.
+
+```bash
+pipenv run prod
+```
+
 ## Contributing
 
 ### Install development environment
@@ -58,7 +67,7 @@ If you want to freeze all the packages, use
 this procedure
 
 ```bash
-make freeze_requirements
+make update
 ```
 
 ### Activate the python environment
