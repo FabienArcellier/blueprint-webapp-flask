@@ -34,8 +34,8 @@ clean : ## remove all transient directories and files
 dist:
 	pipenv run python setup.py sdist
 
-.PHONY: freeze_requirements
-freeze_requirements: ## update the project dependencies based on setup.py declaration
+.PHONY: update
+update: ## update the project dependencies based on setup.py declaration
 	pipenv update
 
 .PHONY: install_requirements_dev
@@ -52,6 +52,10 @@ lint: ## run pylint
 
 .PHONY: start
 start: ## run the webserver for development
+	pipenv run start
+
+.PHONY: prod
+prod: ## run the webserver for production
 	pipenv run start
 
 .PHONY: tests
