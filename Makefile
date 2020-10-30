@@ -56,7 +56,7 @@ start: ## run the webserver for development
 
 .PHONY: prod
 prod: ## run the webserver for production
-	pipenv run start
+	pipenv run prod
 
 .PHONY: tests
 tests: tests_units tests_acceptances ## run automatic tests
