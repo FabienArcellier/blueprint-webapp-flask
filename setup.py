@@ -11,11 +11,11 @@ setup(
     long_description=open('README.md').read(),
     install_requires=[
         'flask',
-        'gunicorn'
+        'gunicorn',
+        'honcho'
     ],
     extras_require={
         'dev': [
-            'honcho',
             'pylint',
             'coverage'
         ]
