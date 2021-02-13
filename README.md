@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/FabienArcellier/blueprint-webapp-flask.svg?branch=master)](https://travis-ci.org/FabienArcellier/blueprint-webapp-flask)
+![continuous_integration](https://github.com/FabienArcellier/blueprint-webapp-flask/workflows/continuous_integration/badge.svg)
 
 ## Motivation
 
