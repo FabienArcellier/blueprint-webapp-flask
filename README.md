@@ -1,4 +1,4 @@
-![continuous_integration](https://github.com/FabienArcellier/blueprint-webapp-flask/workflows/continuous_integration/badge.svg)
+[![ci](https://github.com/FabienArcellier/blueprint-webapp-flask/actions/workflows/main.yml/badge.svg)](https://github.com/FabienArcellier/blueprint-webapp-flask/actions/workflows/main.yml)
 
 ## Motivation
 
@@ -47,7 +47,7 @@ This blueprint use ``gunicorn`` as wsgi server for production configuration.
 The command is set in the Procfile to be available on PaaS environment as ``Heroku`` or ``Scalingo``.
 
 ```bash
-pipenv run prod
+make prod
 ```
 
 ## Contributing
@@ -67,7 +67,7 @@ If you want to freeze all the packages, use
 this procedure
 
 ```bash
-make update
+make freeze_requirements
 ```
 
 ### Activate the python environment
@@ -85,14 +85,34 @@ Before commit or send a pull request, you have to execute pylint to check the sy
 of your code and run the unit tests to validate the behavior.
 
 ```bash
-make lint
-make tests
+make ci
 ```
 
 ## Contributors
 
 * Fabien Arcellier
+*
 
 ## License
 
-A short snippet describing the license (MIT, Apache, etc.)
+MIT License
+
+Copyright (c) 2021 Fabien Arcellier
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

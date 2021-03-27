@@ -1,4 +1,4 @@
-name: continuous_integration
+name: ci
 
 on: [push, pull_request]
 
@@ -7,18 +7,20 @@ jobs:
         runs-on: ubuntu-latest
         strategy:
             matrix:
-                python-version: [3.8]
+                python-version: [3.6, 3.7, 3.8]
 
         steps:
             -   uses: actions/checkout@v2
 
             -   name: Set up Python ${{ matrix.python-version }}
                 uses: actions/setup-python@v2
+                with:
+                    python-version: ${{ matrix.python-version }}
 
-            -   name: install pipenv package manager
+            -   name: update package manager & install python3 environment
                 run: |
                     sudo pip install pipenv
-                    make install_requirements_dev
+                    pipenv install --dev
 
             -   name: lint
                 run:
