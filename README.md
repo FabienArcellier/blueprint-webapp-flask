@@ -15,7 +15,7 @@ blueprint to implement a flask application. This application may be used to:
 The following requirements has to be setup on your host before running the command
 from this repository.
 
-* `python 3.6` at least
+* `python 3.8` at least
 * [pipenv](https://pipenv.pypa.io/en/latest/)
 
 ### Install the python dependencies
