@@ -46,11 +46,11 @@ lint: _init_venv ## run pylint
 
 .PHONY: start
 start: ## run the webserver for development
-	pipenv run start
+	pipenv run honcho start -f Procfile.dev
 
 .PHONY: prod
 prod: ## run the webserver for production
-	pipenv run prod
+	pipenv run honcho start
 
 .PHONY: tests
 tests: _init_venv tests_units tests_acceptances ## run automatic tests
